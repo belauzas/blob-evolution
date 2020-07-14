@@ -1,0 +1,46 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.map {
+    display: inline-block;
+    width: 700px;
+    height: 700px;
+    background-color: #eee;
+    background-image: url(../img/tileGrass2.png);
+    box-shadow: 0 4px 10px #0008;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    .food {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: translate(-10px, -10px);
+    }
+        .food[data-state="offspring"] {
+            background-image: url(../img/food/smokeWhite5.png);
+        }
+        .food[data-state="young"] {
+            background-image: url(../img/food/smokeYellow3.png);
+        }
+        .food[data-state="edible"] {
+            background-image: url(../img/food/treeSmall.png);
+        }
+        .food[data-state="poison"] {
+            background-image: url(../img/food/smokeOrange3.png);
+        }
+        .food[data-state="empty"] {
+            background-image: url(../img/food/smokeGrey3.png);
+        }
