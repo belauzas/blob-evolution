@@ -44,3 +44,22 @@ body * {
         .food[data-state="empty"] {
             background-image: url(../img/food/smokeGrey3.png);
         }
+    .animal {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        background-image: url(../img/animal/bear.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: translate(-10px, -10px);
+    }
+        .animal::before {
+            content: attr(data-energy);
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            border: #555;
+        }

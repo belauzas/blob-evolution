@@ -6,6 +6,7 @@ class Food {
         this.id = setup.id;
         this.x = setup.x;
         this.y = setup.y;
+        this.energy = 40;
         this.stateTime = {
             offspring: 2,               // seconds
             young: 2,
@@ -15,6 +16,7 @@ class Food {
         }
         this.state = 'offspring';
         this.time = 0;
+        this.whoWantsToEatMe = [];
 
         this.init();
     }
@@ -38,7 +40,6 @@ class Food {
 
     grow( dt ) {
         this.time += dt;
-        console.log( this.state, this.time );
         if ( this.time > this.stateTime[ this.state ] ) {
             this.time -= this.stateTime[ this.state ];
             switch ( this.state ) {
